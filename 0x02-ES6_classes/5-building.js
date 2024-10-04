@@ -1,6 +1,6 @@
-export default class Building{
-	constructor(sqft){
-		this._sqft = sqft;
+export default class Building {
+  constructor(sqft) {
+    this._sqft = sqft;
 		 if (this.constructor !== Building) {
 			 if (typeof this.evacuationWarningMessage !== 'function') {
 				 throw new Error(
@@ -8,14 +8,13 @@ export default class Building{
 				 );
 			 }
 		 }
-	}
+  }
 
-	get sqft(){
-		return this._sqft;
-	}
-	
-	set sqft(input){
-		this._sqft = input;
-	}
+  get sqft() {
+    return this._sqft;
+  }
 
+  set sqft(input) {
+    this._sqft = input;
+  }
 }
