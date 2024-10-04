@@ -32,6 +32,10 @@ export default class HolbertonCourse {
         }
 
 	set students(input){
+		const isStringsArray = arr => arr.every(i => typeof i === "string")
+		if (isStringsArray !== true){
+                        throw new TypeError("Students must be a string of arrays")
+                }
 		if (Array.isArray(input) !== true){
                         throw new TypeError("Students must be an array")
                 }
